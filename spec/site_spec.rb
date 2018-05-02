@@ -4,7 +4,7 @@ require './app/app'
 require 'pry'
 require 'pry-byebug'
 
-Sitespec.configuration.build_path = '_site'
+Sitespec.configuration.build_path = 'docs' # for GitHub Pages
 
 describe 'Sitespec' do
   let(:app) do

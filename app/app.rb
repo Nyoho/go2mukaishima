@@ -1,4 +1,5 @@
 require 'open-uri'
+require 'uri'
 
 module Site
   class App < Padrino::Application
@@ -16,6 +17,7 @@ module Site
 
     get "/" do
       @title = @config['title']
+      @tweet_text = URI.escape("#{@config['description']} \##{@config['hashtag']} #{@config['title']}")
       slim :top #, locals: { episodes: sorted_episodes }
     end
 

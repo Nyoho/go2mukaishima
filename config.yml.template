@@ -1,0 +1,11 @@
+title: title
+url: https://example.net
+email: nobody@exampl.net
+author: washi
+description: This is something
+description_long: This is something. That\'s it.
+hashtag: somehashtag
+keywords: a,b,c,hello,project
+language: ja
+timezone: Asia/Tokyo
+google_analytics_code: UA-??????-?

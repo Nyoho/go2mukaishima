@@ -1,0 +1,19 @@
+#+TITLE: 向島に行こうや #go2mukaishima
+
+
+** Usage
+*** Generate with sitespec
+#+BEGIN_SRC sh
+bundle exec rspec
+#+END_SRC
+
+*** Develop
+#+BEGIN_SRC sh
+bundle exec padrino s
+#+END_SRC
+
+*** Deploy
+#+BEGIN_SRC sh
+rsync -avz _site/* example.net:/var/www/hoge/
+#+END_SRC
+

@@ -14,6 +14,10 @@ html
     meta content=@config['description'] name="description"
     meta content="Nyoho" name="Author"
     meta property="og:image" content=@ogimage_url
+    meta property="og:url" content=@config['url']
+    meta property="og:title" content=@title
+    meta property="og:description" content=@config['description']
+    meta property="og:type" content="website"
     / = javascript_include_tag 'script'
     / = stylesheet_link_tag :main
     link href="stylesheets/main.css" rel="stylesheet" type="text/css" /

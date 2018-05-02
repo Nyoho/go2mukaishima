@@ -15,6 +15,11 @@ describe 'Sitespec' do
     /
     /stylesheets/main.css
     /javascripts/script.js
+    /images/background.jpg
+    /images/go2mukaishima.jpg
+    /images/go2mukaishima.png
+    /images/logo.svg
+    /images/white.png
   ].each do |path|
     describe "GET #{path}", :sitespec do
       it "returns 200" do

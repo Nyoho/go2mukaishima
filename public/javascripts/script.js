@@ -16,7 +16,9 @@ function init() {
             <div class="col-8 ml-auto">
               <p>
                 <strong><a v-bind:href="item.url">{{ item.title }}</a></strong>
-                <br>
+              </p>
+              <p class="item-url">
+                <a v-bind:href="item.url">{{ item.url }}</a>
               </p>
             </div>
           </div>

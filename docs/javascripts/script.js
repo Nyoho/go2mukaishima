@@ -9,8 +9,9 @@ function init() {
       <div class="col-md-8 col-lg-4 mt-4 mt-lg-0">
         <div class="fdb-box">
           <div class="row no-gutters align-items-center">
-            <div class="col-3">
-              <i class="fas fa-info-circle"></i>
+            <div class="col-3 icon">
+              <i v-if="item.url.match(/twitter.com/)" class="fab fa-twitter"></i>
+              <i v-else class="fas fa-info-circle"></i>
             </div>
             <div class="col-8 ml-auto">
               <p>

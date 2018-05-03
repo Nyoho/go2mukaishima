@@ -18,7 +18,7 @@ module Site
     get "/" do
       @title = @config['title']
       @tweet_text = URI.escape("#{@config['description']} \##{@config['hashtag']} #{@config['title']}")
-      slim :top #, locals: { episodes: sorted_episodes }
+      slim :top
     end
 
     ##

@@ -10,7 +10,7 @@ function init() {
         <div class="fdb-box">
           <div class="row no-gutters align-items-center">
             <div class="col-3">
-              <img alt="image" class="img-fluid" src="images/white.png">
+              <i class="fas fa-info-circle"></i>
             </div>
             <div class="col-8 ml-auto">
               <p>

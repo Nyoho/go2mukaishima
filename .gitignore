@@ -8,3 +8,5 @@ db/*.db
 .*.sw*
 _site/*
 .env
+public/stylesheets/*.css
+public/stylesheets/*.css.map

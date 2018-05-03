@@ -20,6 +20,7 @@ html
     meta property="og:type" content="website"
     / = javascript_include_tag 'script'
     / = stylesheet_link_tag :main
+    script src="javascripts/script.js"
     link href="stylesheets/main.css" rel="stylesheet" type="text/css" /
   body
     header data-block-type="headers" data-id="4" 
@@ -101,8 +102,8 @@ html
               | 提案は
               a href="https://docs.google.com/forms/d/e/1FAIpQLSfxRQDuQYpgpsdIy0IJTPnDtBdaVVZjWFO53brZx0G6DYWfZg/viewform?usp=sf_link" こちらのform
               | からどうぞ。
-        .row.mt-5.align-items-center.justify-content-center
-
+        #app.row.mt-5.align-items-center.justify-content-center
+            
           .col-md-8.col-lg-4
             .fdb-box
               .row.no-gutters.align-items-center
@@ -117,6 +118,8 @@ html
                 .col-12
                   p.text-h3
                     | <blockquote class="twitter-tweet" data-lang="ja"><p lang="ja" dir="ltr">向島の温泉宿に泊まったことがある。　逃亡犯が泳いで渡ったらしい海峡、客室から、対岸への渡し船乗り場が見えて風情があった。<br>翌朝5時台くらいから渡し船が稼働しており、寝坊が出来なかったのも、良い思い出・・・<a href="https://t.co/xCnZFp61BC">https://t.co/xCnZFp61BC</a></p>&mdash; 蒼々舎→下諏訪最小工務店 (@SososhaSuwa) <a href="https://twitter.com/SososhaSuwa/status/991267779675213825?ref_src=twsrc%5Etfw">2018年5月1日</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
+
+          venue-item v-for="item in venues" v-bind:item="item"
 
           .col-md-8.col-lg-4.mt-4.mt-lg-0
             .fdb-box
@@ -215,6 +218,7 @@ html
     script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" 
     script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" 
     script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" 
+    script src="https://cdn.jsdelivr.net/npm/vue"
     javascript:
       if(!window.location.hostname.match(/^127.0.0.1$/)){
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){

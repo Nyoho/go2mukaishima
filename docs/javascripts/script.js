@@ -21,8 +21,7 @@ function init() {
           </div>
           <div class="row mt-4">
             <div class="col-12">
-              <p class="text-h3">
-                {{ item.description }}
+              <p class="text-h3" v-html="item.description">
               </p>
               <p v-if="item.name !== ''" class="text-h3">
                 by {{ item.name }}
@@ -41,13 +40,13 @@ function init() {
   xhr.onreadystatechange = function() {
     if (xhr.readyState === 4 && (xhr.status === 200 || xhr.status === 304)) {
       data = xhr.response;
-      console.log(data);
       var app = new Vue({
         el: '#app',
         data: {
           venues: data
         }
-      })
+      });
+      twttr.widgets.load();
     }
   }
   xhr.send();

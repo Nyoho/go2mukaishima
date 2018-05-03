@@ -297,4 +297,11 @@ li {
   .item-url a {
     color: #888; }
 
+.bg-dark-translucent {
+  background-color: rgba(0, 0, 0, 0.4); }
+
+p.text-h3 a {
+  color: #00abff;
+  font-size: larger; }
+
 /*# sourceMappingURL=main.css.map */

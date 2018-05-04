@@ -1,3 +1,5 @@
+var app;
+
 window.onload = function () {
   init();
 }
@@ -36,19 +38,26 @@ function init() {
     `
   })
 
+  app = new Vue({
+    el: '#app',
+    data: {
+      venues: []
+    }
+  });
+
+  loadData();
+  setInterval(loadData, 10*60*1000); // 10 min
+}
+
+function loadData() {
   const xhr = new XMLHttpRequest();
   const url = 'https://script.google.com/macros/s/AKfycbwUVB2P22NgTMJmoMFTK4c66rX53UWLahm-q-uwK4v1AtX76nFx/exec';
-  xhr.open("GET", url, true);
+  xhr.open("GET", url);
   xhr.responseType = 'json';
   xhr.onreadystatechange = function() {
     if (xhr.readyState === 4 && (xhr.status === 200 || xhr.status === 304)) {
       data = xhr.response;
-      var app = new Vue({
-        el: '#app',
-        data: {
-          venues: data
-        }
-      });
+      app.venues = data;
       twttr.widgets.load();
     }
   }
